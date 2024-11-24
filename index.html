@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, viewport-fit-cover, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jan Zemánek">
+    <meta name="keywords" content="Jan Zemánek, Web, Programování, HTML, CSS, JavaScript, Java, Vue, Spring Boot
+    , Developer, Front-end, Back-end, Full-stack, Full-stack developer, Front-end developer, Back-end developer">
+    <meta name="description"
+        content="Osobní web - Jan Zemánek. Fullstack developer webových aplikací. Programování Spring Boot, Thyeleaf, Vue.js, JavaScript, HTML, CSS">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/NavbarStyle.css">
+    <title>MujWeb</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <button id="navbarSmMenuBtn" aria-label="Otevření menu" aria-controls="navbarSmMenu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="navbarMenu">
+                <li>
+                    <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="navbar-link active"
+                        aria-label="Domů">Domů</a>
+                </li>
+                <li>
+                    <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="navbar-link" aria-label="O mně">O mně</a>
+                </li>
+                <li>
+                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn" class="navbar-link"
+                        aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                </li>
+                <li>
+                    <a href="projekty.html" alt="Jan Zemánek Projekty" id="projektyBtn" class="navbar-link"
+                        aria-label="Projekty">Projekty</a>
+                </li>
+                <li>
+                    <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn" class="navbar-link"
+                        aria-label="Kontakty">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navbarSmMenu" id="navbarSmMenu" aria-hidden="true">
+            <div id="navbarSmMenuContent">
+                <div id="navbarSmMenuHeader">
+                    <button class="navbarSmMenuCloseBtn" aria-label="Zavřít menu" aria-expanded="false"
+                        aria-controls="navbarSmMenu"><i class="fa fa-close" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sm-menu-list">
+                    <li class="sm-menu-item active">
+                        <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="sm-menu-link"
+                            aria-label="Domů" aria-current="page">Domů</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="sm-menu-link" aria-label="O mně"
+                            aria-current="page">O mně</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="sm-menu-link"
+                            aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="projekty.html" alt="Jan Zemánek Projekty" class="sm-menu-link"
+                            aria-label="Projekty">Projekty</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="kontakt.html" alt="Jan Zemánek kontakt" class="sm-menu-link"
+                            aria-label="Kontakty">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Jan Zemánek</h1>
+            <p>Fullstack developer</p>
+            <section class="cards-section-lg">
+                <div class="prev-card"><button class="arrow-toggle" aria-label="Předchozí karta" data-toggle="prev"><i
+                            class="fa fa-chevron-left" aria-hidden="true"></i></button></div>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <p>Jsem nadšený fullstack vývojář se zaměřením na Java, Spring Boot a moderní webové
+                                technologie.
+                            </p>
+                            <p>Roky se intenzivně zdokonaluji ve svých dovednostech, což mě vede k vytváření kvalitních
+                                a inovativních webových řešení.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="card-footer-link button"
+                                aria-label="O mně">Více</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="card-content">
+                            <p>Pracuji s širokou paletou technologií, včetně Java, Spring Boot, HTML, CSS, JavaScript a
+                                SQL, a používám moderní frameworky jako Vue.js. </p>
+                            <p> Pro testování často používám H2 databázi a JUnit pro jednotkové testování. Mé oblíbené
+                                IDE jsou VSCode a IntelliJ IDEA.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="card-footer-link button"
+                                aria-label="Znalosti a dovednosti">Více</a>
+                        </div>
+                    </div>
+
+                    <div class="card ">
+                        <div class="card-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="card-content">
+                            <p>Mám za sebou spousty zajímavých projektů a
+                                aplikacích, od statických webů, přes e-commerce až po old school hry ve Swingu.
+                            </p>
+                            <p>Rád experimentuji a učím se nové technologie skrze praktické projekty.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="projekty.html" alt="Jan Zemánek Projekty" class="card-footer-link button"
+                                aria-label="Projekty">Více</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-card"><button class="arrow-toggle" aria-label="Další karta" data-toggle="next"><i
+                            class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
+            </section>
+        </div>
+    </div>
+
+    <main>
+        <section class="cards-section">
+            <div class="card lazy-loading">
+                <div class="card-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="card-content">
+                    <p>Jsem nadšený fullstack vývojář se zaměřením na Java, Spring Boot a moderní webové technologie.
+                    </p>
+                    <p>Roky se intenzivně zdokonaluji ve svých dovednostech, což mě vede k vytváření kvalitních a
+                        inovativních
+                        webových řešení.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="card-footer-link button"
+                        aria-label="O mně">Více</a>
+                </div>
+            </div>
+            <div class="card lazy-loading">
+                <div class="card-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="card-content">
+                    <p>Pracuji s širokou paletou technologií, včetně Java, Spring Boot, HTML, CSS, JavaScript a SQL, a
+                        používám
+                        moderní frameworky jako Vue.js.
+                    </p>
+                    <p>
+                        Pro testování často
+                        používám H2 databázi a JUnit pro jednotkové testování. Mé oblíbené IDE jsou VSCode a IntelliJ
+                        IDEA.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="card-footer-link button"
+                        aria-label="Znalosti a dovednosti">Více</a>
+                </div>
+            </div>
+
+            <div class="card lazy-loading">
+                <div class="card-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="card-content">
+                    <p>Mám za sebou spousty zajímavých projektů a
+                        aplikacích, od statických webů, přes e-commerce až po old school hry ve Swingu.
+                    </p>
+                    <p>Rád experimentuji a učím se nové technologie
+                        skrze praktické projekty.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="projekty.html" alt="Jan Zemánek Projekty" class="card-footer-link button"
+                        aria-label="Projekty">Více</a>
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+    <footer>
+        <hr>
+        <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script src="JS/ParallaxScript.js"></script>
+    <script src="JS/LazyLoadScript.js"></script>
+    <script src="JS/NavbarScript.js"></script>
+    <script src="JS/Script.js"></script>
+</body>
+
+</html>

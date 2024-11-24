@@ -1,0 +1,212 @@
+#navbarSmMenu {
+    display: none !important;
+}
+
+#navbarSmMenuBtn {
+    display: none !important;
+}
+
+#navbar {
+    height: 50px;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: end;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* NAVBAR */
+    #menuButton {
+        display: none;
+    }
+
+    #navbar ul {
+        background-color: transparent;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #navbar li {
+        display: flex;
+        position: relative;
+    }
+
+    #navbar li a {
+        color: white;
+    }
+
+    .navbar-link {
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: block;
+    }
+
+    .navbar-link:hover::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 4px;
+        background-color: rgba(255, 0, 0, 0.64);
+        left: 5%;
+        bottom: 5px;
+        animation-name: slideUnderlineFromCenter;
+        animation-duration: 0.5s;
+    }
+
+    .navbar-link[class*="active"]::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 4px;
+        background-color: #C62828;
+        left: 5%;
+        bottom: 5px;
+        animation-name: slideUnderlineFromCenter;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes slideUnderlineFromCenter {
+        0% {
+            width: 0;
+            left: 50%;
+        }
+
+        100% {
+            width: 90%;
+            left: 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #navbar {
+        display: flex;
+        justify-content: end;
+    }
+
+    #navbar #navbarMenu {
+        display: none;
+    }
+
+    #navbarSmMenuBtn {
+        display: block !important;
+        border: 0;
+        padding: 0.5em;
+        background-color: transparent;
+        color: white;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 1.4em;
+
+        i {
+            background-color: transparent;
+        }
+    }
+
+    #navbarSmMenu {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        min-width: 100vw;
+        min-height: 100vh !important;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    #navbarSmMenu[class*="active"] {
+        display: block !important;
+    }
+
+    #navbarSmMenuHeader {
+        display: inline-flex;
+        position: relative;
+        width: 100%;
+        height: 30px;
+        padding: 0.5em;
+    }
+
+    #navbarSmMenuContent #navbarSmMenuHeader .navbarSmMenuCloseBtn {
+        border: 0;
+        padding: 0.5em;
+        background-color: transparent;
+        color: #333;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 1.4em;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+
+        i {
+            background-color: transparent;
+        }
+    }
+
+    #navbarSmMenuContent {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #ffffff;
+        z-index: 1000;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #navbarSmMenuContent[class*="active"] {
+        transform: translateX(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #navbarSmMenu #navbarSmMenuContent .sm-menu-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    #navbarSmMenu #navbarSmMenuContent .sm-menu-list .sm-menu-item {
+        margin-bottom: 5px;
+        text-align: left;
+        padding-left: 1em;
+        width: 100%;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #navbarSmMenu #navbarSmMenuContent .sm-menu-list .sm-menu-item[class*="active"] {
+        /* Red background for active menu item */
+        background-color: #C62828;
+
+        .sm-menu-link {
+            color: #ffffff;
+        }
+    }
+
+    #navbarSmMenu #navbarSmMenuContent .sm-menu-list .sm-menu-item .sm-menu-link {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease-in-out;
+    }
+}

@@ -1,0 +1,238 @@
+body {
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+    min-height: 97.8vh;
+    box-sizing: border-box;
+}
+
+#navbar ul {
+    background-color: rgb(0, 0, 0);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar li {
+    display: inline-block;
+    position: relative;
+}
+
+#navbar li a {
+    color: white;
+}
+
+#omneBtn,
+#kontaktyBtn,
+#dovednostiBtn {
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+}
+
+#omneBtn:hover,
+#kontaktyBtn:hover,
+#dovednostiBtn:hover {
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: rgba(255, 0, 0, 0.64);
+    display: block;
+}
+
+#dovednostiBtn {
+    text-decoration: underline 5px;
+    text-decoration-color: rgba(255, 0, 0, 0.64);
+}
+
+.container {
+    display: flex;
+}
+
+.column1 {
+    flex: 1;
+    padding-right: 2.5%;
+    max-width: 50%;
+}
+
+.column2 {
+    padding-left: 2.5%;
+    flex: 1;
+    min-width: 50%;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 0, 0, 0.64);
+    text-shadow: 1.2px -0.5px lightslategrey;
+}
+
+.column2>ul>li {
+    padding-top: 3px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 0, 0, 0.64);
+    text-shadow: 1.5px -0.5px lightslategrey;
+}
+
+article section a {
+    text-decoration: none;
+    color: initial;
+}
+
+article section a:hover {
+    color: initial;
+    text-decoration: underline;
+    font-size: 1.05rem;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    height: 50px;
+    bottom: 0px;
+    width: 89.8%;
+    position: absolute;
+}
+
+.galerie .slides {
+overflow: hidden;
+}
+
+.galerie .slides a img {
+    height: 180px;
+}
+
+#ulResponsive {
+    display: none;
+}
+
+#tlacitkoKurz,
+#tlacitkoMimoKurz {
+    display: none;
+}
+
+.galerieResponsive {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 0 !important;
+    }
+
+    footer {
+        position: relative !important;
+        width: 100%;
+    }
+
+    #ulResponsive {
+        display: block;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .column1,
+    .column2 {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .galerie {
+        display: none;
+    }
+
+    .galerieResponsive .slides a img {
+        height: 100px;
+    }
+
+    .galerieResponsive .slides {
+        
+        overflow-y: hidden;
+        overflow-block: scroll;
+    }
+
+    #mainNavbarUl li {
+        display: none;
+    }
+
+    #navbar {
+        height: 50px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: end;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        color: rgb(255, 255, 255);
+        padding: 14px 20px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        border: 0;
+        background-color: rgb(0,0,0);
+        padding-right: 40px;
+    }
+    
+    .dropdown:hover .dropbtn {
+        background-color: rgba(255, 0, 0, 0.64);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        width: 126px;
+        background-color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-left: -60px;
+        top: 58px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #znalostiKurz {
+        display: none;
+    }
+
+    #znalostiMimoKurz {
+        display: none;
+    }
+
+    #tlacitkoKurz,
+    #tlacitkoMimoKurz {
+        display: block;
+        border: 10px;
+        border-style: double;
+        background-color: green;
+        border-radius: 10px;
+        width: 100px;
+        text-align: center;
+        color: white;
+        box-sizing: border-box;
+        box-shadow: 20px;
+    }
+}
