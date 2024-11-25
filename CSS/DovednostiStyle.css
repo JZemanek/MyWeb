@@ -1,238 +1,129 @@
-body {
-    padding-left: 5%;
-    padding-right: 5%;
-    position: relative;
-    min-height: 97.8vh;
-    box-sizing: border-box;
-}
-
-#navbar ul {
-    background-color: rgb(0, 0, 0);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#navbar li {
-    display: inline-block;
-    position: relative;
-}
-
-#navbar li a {
-    color: white;
-}
-
-#omneBtn,
-#kontaktyBtn,
-#dovednostiBtn {
-    text-align: center;
-    padding: 14px 20px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: block;
-}
-
-#omneBtn:hover,
-#kontaktyBtn:hover,
-#dovednostiBtn:hover {
-    text-align: center;
-    padding: 14px 20px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    background-color: rgba(255, 0, 0, 0.64);
-    display: block;
-}
-
-#dovednostiBtn {
-    text-decoration: underline 5px;
-    text-decoration-color: rgba(255, 0, 0, 0.64);
-}
-
-.container {
+.categories-nav {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
 }
 
-.column1 {
-    flex: 1;
-    padding-right: 2.5%;
-    max-width: 50%;
+.categories-nav .categories-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.column2 {
-    padding-left: 2.5%;
-    flex: 1;
-    min-width: 50%;
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    padding: 0;
 }
 
-h3 {
-    font-size: 1.2rem;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 0, 0, 0.64);
-    text-shadow: 1.2px -0.5px lightslategrey;
+.skill-item {
+    min-width: 300px;
+    margin: 1em;
 }
 
-.column2>ul>li {
-    padding-top: 3px;
+.skill-item .skill-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #C62828;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-h2 {
-    font-size: 2rem;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 0, 0, 0.64);
-    text-shadow: 1.5px -0.5px lightslategrey;
-}
+.skill-item .skill-card .skill-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 0;
 
-article section a {
-    text-decoration: none;
-    color: initial;
-}
-
-article section a:hover {
-    color: initial;
-    text-decoration: underline;
-    font-size: 1.05rem;
-}
-
-footer {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    text-align: center;
-    height: 50px;
-    bottom: 0px;
-    width: 89.8%;
-    position: absolute;
-}
-
-.galerie .slides {
-overflow: hidden;
-}
-
-.galerie .slides a img {
-    height: 180px;
-}
-
-#ulResponsive {
-    display: none;
-}
-
-#tlacitkoKurz,
-#tlacitkoMimoKurz {
-    display: none;
-}
-
-.galerieResponsive {
-    display: none;
-}
-
-@media screen and (max-width: 767px) {
-    body {
-        padding: 0 !important;
+    .skill-card-icon {
+        font-size: 6em;
     }
 
-    footer {
-        position: relative !important;
-        width: 100%;
-    }
-
-    #ulResponsive {
-        display: block;
-    }
-
-    .container {
-        display: block;
-    }
-
-    .column1,
-    .column2 {
-        flex: none;
-        max-width: 100%;
-    }
-
-    .galerie {
-        display: none;
-    }
-
-    .galerieResponsive .slides a img {
-        height: 100px;
-    }
-
-    .galerieResponsive .slides {
-        
-        overflow-y: hidden;
-        overflow-block: scroll;
-    }
-
-    #mainNavbarUl li {
-        display: none;
-    }
-
-    #navbar {
-        height: 50px;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        justify-content: end;
-    }
-
-    .dropdown .dropbtn {
-        font-size: 1.2rem;
-        border: none;
-        outline: none;
-        color: rgb(255, 255, 255);
-        padding: 14px 20px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        border: 0;
-        background-color: rgb(0,0,0);
-        padding-right: 40px;
-    }
-    
-    .dropdown:hover .dropbtn {
-        background-color: rgba(255, 0, 0, 0.64);
-    }
-
-    .dropdown-content {
-        display: none;
-        position: fixed;
-        width: 126px;
-        background-color: black;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        margin-left: -60px;
-        top: 58px;
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 14px 20px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    #znalostiKurz {
-        display: none;
-    }
-
-    #znalostiMimoKurz {
-        display: none;
-    }
-
-    #tlacitkoKurz,
-    #tlacitkoMimoKurz {
-        display: block;
-        border: 10px;
-        border-style: double;
-        background-color: green;
-        border-radius: 10px;
-        width: 100px;
+    .skill-card-title {
+        font-size: 1.5em;
+        font-weight: bold;
         text-align: center;
-        color: white;
-        box-sizing: border-box;
-        box-shadow: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.skill-item .skill-card .skill-card-content {
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    padding: 0.5em;
+    padding-bottom: 2em;
+
+    .skill-level {
+        font-size: 1.2em;
+        text-align: center;
+    }
+}
+
+.skill-card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .skill-card-btn {
+        background-color: #C62828;
+        color: #1E1E1E;
+        border: none;
+        border-radius: 0;
+        padding: 0.5em 1em;
+        font-size: 1.4em;
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+.skill-item .skill-card[class*="card-active"] {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+    width: 100% !important;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden !important;
+
+    .skill-card-content {
+        overflow-y: auto;
+    }
+
+    .skill-card-footer {
+        display: none;
     }
 }

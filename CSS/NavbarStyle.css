@@ -10,23 +10,35 @@
     height: 50px;
     background-color: #0D0D0D;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+#navbarMenu {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    #navbarMenu{
+        width: 78%;
+    }
+}
+
+@media (min-width: 768px)  {
 
     /* NAVBAR */
     #menuButton {
         display: none;
     }
 
-    #navbar ul {
+    #navbar #navbarMenu {
         background-color: transparent;
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
     }
 
     #navbar li {
@@ -69,6 +81,8 @@
         animation-name: slideUnderlineFromCenter;
         animation-duration: 0.5s;
     }
+
+
 
     @keyframes slideUnderlineFromCenter {
         0% {
@@ -178,7 +192,6 @@
         overflow: hidden;
         width: 100%;
         box-sizing: border-box;
-        padding: 0;
     }
 
     #navbarSmMenu #navbarSmMenuContent .sm-menu-list .sm-menu-item {

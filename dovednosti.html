@@ -4,127 +4,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, viewport-fit-cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jan Zemánek">
+    <meta name="keywords"
+        content="Jan Zemánek, Web, Programování, HTML, CSS, JavaScript, Java, Vue, Spring Boot, Developer, Front-end, Back-end, Full-stack, Full-stack developer, Front-end developer, Back-end developer">
+    <meta name="description"
+        content="Osobní web - Jan Zemánek. Fullstack developer webových aplikací. Programování Spring Boot, Thyeleaf, Vue.js, JavaScript, HTML, CSS">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+
+    <!-------------------- CSS links --------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <link rel="stylesheet" href="CSS/NavbarStyle.css">
+    <link rel="stylesheet" href="CSS/Style.css">
     <link rel="stylesheet" href="CSS/DovednostiStyle.css">
+    <!---------------------------------------------------->
     <title>Dovednosti</title>
 </head>
 
-<body>
+<body style="overflow: hidden !important;">
     <header>
         <nav id="navbar">
-            <ul id="mainNavbarUl">
+            <button id="navbarSmMenuBtn" aria-label="Otevření menu" aria-controls="navbarSmMenu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="navbarMenu">
                 <li>
-                    <a href="index.html" alt="Jan Zemánek homepage" id="omneBtn">O mně</a>
+                    <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="navbar-link"
+                        aria-label="Domů">Domů</a>
                 </li>
                 <li>
-                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn">Znalosti a dovednosti</a>
+                    <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="navbar-link" aria-label="O mně">O mně</a>
                 </li>
                 <li>
-                    <a href="projekty.html" alt="Jan Zemánek Projekty" id="projektyBtn">Projekty</a>
+                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn" class="navbar-link active"
+                        aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
                 </li>
                 <li>
-                    <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn">Kontakty</a>
+                    <a href="projekty.html" alt="Jan Zemánek Projekty" id="projektyBtn" class="navbar-link"
+                        aria-label="Projekty">Projekty</a>
                 </li>
-            </ul>
-            <ul id="ulResponsive">
-                <li class="dropdown">
-                    <button class="dropbtn"><img src="CSS/IMAGES/ellipsis-vertical-solid.png" alt="menu" height="26px" id="menuButton"></button>
-                    <div class="dropdown-content">
-                        <a href="index.html" alt="Jan Zemánek homepage" id="omneBtn">O mně</a>
-                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn">Znalosti a dovednosti</a>
-                        <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn">Kontakty</a>
-                    </div>
+                <li>
+                    <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn" class="navbar-link"
+                        aria-label="Kontakty">Kontakt</a>
                 </li>
             </ul>
         </nav>
-
-        <h2>Znalosti a dovednosti</h2>
-
+        <div class="navbarSmMenu" id="navbarSmMenu" aria-hidden="true">
+            <div id="navbarSmMenuContent">
+                <div id="navbarSmMenuHeader">
+                    <button class="navbarSmMenuCloseBtn" aria-label="Zavřít menu" aria-expanded="false"
+                        aria-controls="navbarSmMenu"><i class="fa fa-close" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sm-menu-list">
+                    <li class="sm-menu-item">
+                        <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="sm-menu-link"
+                            aria-label="Domů" aria-current="page">Domů</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="sm-menu-link" aria-label="O mně"
+                            aria-current="page">O mně</a>
+                    </li>
+                    <li class="sm-menu-item active">
+                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="sm-menu-link"
+                            aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="projekty.html" alt="Jan Zemánek Projekty" class="sm-menu-link"
+                            aria-label="Projekty">Projekty</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="kontakt.html" alt="Jan Zemánek kontakt" class="sm-menu-link"
+                            aria-label="Kontakty">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="hero-text">
+        </div>
+    </div>
+    <main>
+        <div class="categories-nav">
+            <ul class="categories-menu">
+                <!-- Programming type categories. Backend, frontend etc.-->
+                <li class="category-item">Backend</li>
+                <li class="category-item">Frontend</li>
+                <li class="category-item">Databáze</li>
+                <li class="category-item">Ostatní</li>
+            </ul>
+        </div>
         <div class="container">
-            <div class="column1">
-                <article>
-                    <section>
-                        <p>Jak už jsem psal v sekci <i><a id="omneOdkazText" href="index.html">O mně</a></i> mám za
-                            sebou akreditovaný kurz
-                            programátora <strong>WWW aplikací v Javě</strong>, u společnosti ITnetwork.
-                        </p>
-                        <p>
-                            Tímto kurzem jsem získal znalosti převážně programovacího jazyka Java a jeho frameworky. To
-                            mi umožňuje tvořit
-                            solidní backend nejen webových aplikací.
-                        </p>
-                        <p>
-                            Mimo to jsem se naučil také pracovet v prostředí frontendu. Zvládnu vytvořit statické,
-                            responzivní webové stránky,
-                            ať už za pomoci Bootstrapu nebo bez něj. Díky znalosti základů JavaScriptu dokážu do
-                            webových stránek vložit jednoduché
-                            dynamické prvky.
-                        </p>
-                        <p>
-                            Stále se ale zdokonaluji a dělám další kurzy na Udemy a u ITnetwork. Chci získat další
-                            zkušenosti v Javě a také více zkušeností
-                            ve frontendu.
-                        </p>
-                    </section>
-                </article>
-                <article>
-                    <section>
-                        <hr>
-                        <p><strong>Hard skills:</strong> NetBeans, VS Code, Java, HTML, CSS, Spring Boot<br>
-                            <strong>Soft skills:</strong> Swing, Bootstrap, Javascript, Git, JUnit<br>
-                            <strong>Denně pracuji převážně s:</strong> NetBeans, VS Code, Java, Swing, HTML, CSS, Spring
-                            Boot
-                        </p>
-                    </section>
-                </article>
+            <ul class="skills-list">
+                <li class="skill-item">
+                    <div class="skill-card skill-beckend card-active">
+                        <div class="skill-card-header">
+                            <i class="devicon-java-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">Java</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
 
-                <div class="galerie">
-                    <h3>Mé certifikáty</h3>
-                    <div class="slides">
-                        <a id="certifikatWeb" href="CSS/IMAGES/Certifikát Webové stránky krok za krokem.jpg"
-                            target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Webové stránky krok za krokem.jpg" alt="Certifikát Web">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
 
-                        <a id="certifikatJavaZaklad" href="CSS/IMAGES/Certifikát Základní konstrukce jazyka Java.jpg"
-                            target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Základní konstrukce jazyka Java.jpg" alt="Certifikát Java">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
 
-                        <a id="certifikatJavaOop"
-                            href="CSS/IMAGES/Certifikát Objektově orientované programování v Javě.jpg" target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Objektově orientované programování v Javě.jpg"
-                                alt="Certifikát Java OOP">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
 
-                        <a id="certifikatMysql" href="CSS/IMAGES/Certifikát MySQL_MariaDB databáze krok za krokem.jpg"
-                            target="_blank">
-                            <img src="CSS/IMAGES/Certifikát MySQL_MariaDB databáze krok za krokem.jpg"
-                                alt="Certifikát MySQL">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
 
-                        <a id="certifikatBootstrap"
-                            href="CSS/IMAGES/Certifikát Kompletní kurz CSS frameworku Bootstrap.jpg" target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Kompletní kurz CSS frameworku Bootstrap.jpg"
-                                alt="Certifikát Bootstrap">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipis
 
-                        <a id="cerifikatZakladJavascipt"
-                            href="CSS/IMAGES/Certifikát Základní konstrukce jazyka JavaScript.jpg" target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Základní konstrukce jazyka JavaScript.jpg"
-                                alt="Certifikát Javascript">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
-                        <a id="certifikatGit" href="CSS/IMAGES/Certifikát Git.jpg" target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Git.jpg" alt="Certifikát Git">
-                        </a>
-                        <a id="certifikatJdbc" href="CSS/IMAGES/Certifikát Databáze v Javě - JDBC.jpg" target="_blank">
-                            <img src="CSS/IMAGES/Certifikát Databáze v Javě - JDBC.jpg" alt="Certifikát Git">
-                        </a>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-beckend">
+                        <div class="skill-card-header">
+                            <i class="devicon-spring-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">Spring Boot</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="skill-item">
+                    <div class="skill-card skill-frontend">
+                        <div class="skill-card-header">
+                            <i class="devicon-html5-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">HTML</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-frontend">
+                        <div class="skill-card-header">
+                            <i class="devicon-css3-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">CSS</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-frontend">
+                        <div class="skill-card-header">
+                            <i class="devicon-bootstrap-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">Bootstrap</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Intermediate </span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-database">
+                        <div class="skill-card-header">
+                            <i class="devicon-javascript-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">JavaScript</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Advanced</span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-database">
+                        <div class="skill-card-header">
+                            <i class="devicon-vuejs-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">Vue.js</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Fundamental</span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-database">
+                        <div class="skill-card-header">
+                            <i class="devicon-mysql-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">MySQL</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Intermediate </span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-database">
+                        <div class="skill-card-header">
+                            <i class="devicon-sqlite-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">SQLite</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Intermediate </span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
                     </div>
 
-                </div>
-            </div>
+                <li class="skill-item">
+                    <div class="skill-card skill-other">
+                        <div class="skill-card-header">
+                            <i class="devicon-git-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">Git</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Fundamental</span>
+                            <div class="skill-description">
 
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-other">
+                        <div class="skill-card-header">
+                            <i class="devicon-vscode-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">VS Code</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Intermediate </span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="skill-item">
+                    <div class="skill-card skill-other">
+                        <div class="skill-card-header">
+                            <i class="devicon-intellij-plain skill-card-icon"></i>
+                            <h3 class="skill-card-title">IntelliJ IDEA</h3>
+                        </div>
+                        <div class="skill-card-content">
+                            <span class="skill-level">Intermediate </span>
+                            <div class="skill-description">
+
+                            </div>
+                        </div>
+                        <div class="skill-card-footer">
+                            <button type="button" class="skill-card-btn">Zobrazit</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- 
             <div class="column2">
                 <h3>Znalosti získané během akreditovaného kurzu</h3>
                 <button id="tlacitkoKurz">Zobrazit</button>
@@ -156,53 +407,18 @@
         <div class="galerieResponsive">
             <h3>Mé certifikáty</h3>
             <div class="slides">
-                <a id="certifikatWeb" href="CSS/IMAGES/Certifikát Webové stránky krok za krokem.jpg" target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Webové stránky krok za krokem.jpg" alt="Certifikát Web">
-                </a>
-
-                <a id="certifikatJavaZaklad" href="CSS/IMAGES/Certifikát Základní konstrukce jazyka Java.jpg"
-                    target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Základní konstrukce jazyka Java.jpg" alt="Certifikát Java">
-                </a>
-
-                <a id="certifikatJavaOop" href="CSS/IMAGES/Certifikát Objektově orientované programování v Javě.jpg"
-                    target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Objektově orientované programování v Javě.jpg"
-                        alt="Certifikát Java OOP">
-                </a>
-
-                <a id="certifikatMysql" href="CSS/IMAGES/Certifikát MySQL_MariaDB databáze krok za krokem.jpg"
-                    target="_blank">
-                    <img src="CSS/IMAGES/Certifikát MySQL_MariaDB databáze krok za krokem.jpg" alt="Certifikát MySQL">
-                </a>
-
-                <a id="certifikatBootstrap" href="CSS/IMAGES/Certifikát Kompletní kurz CSS frameworku Bootstrap.jpg"
-                    target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Kompletní kurz CSS frameworku Bootstrap.jpg"
-                        alt="Certifikát Bootstrap">
-                </a>
-
-                <a id="cerifikatZakladJavascipt" href="CSS/IMAGES/Certifikát Základní konstrukce jazyka JavaScript.jpg"
-                    target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Základní konstrukce jazyka JavaScript.jpg"
-                        alt="Certifikát Javascript">
-                </a>
-
-                <a id="certifikatGit" href="CSS/IMAGES/Certifikát Git.jpg" target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Git.jpg" alt="Certifikát Git">
-                </a>
-
-                <a id="certifikatJdbc" href="CSS/IMAGES/Certifikát Databáze v Javě - JDBC.jpg" target="_blank">
-                    <img src="CSS/IMAGES/Certifikát Databáze v Javě - JDBC.jpg" alt="Certifikát Git">
-                </a>
             </div>
-        </div>
-        <footer>
-            <hr>
-            <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
-        </footer>
-        
-        <script src="JS/DovednostiJs.js"></script>
+        </div> -->
+    <footer>
+        <hr>
+        <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <!---------------- JavaScript ------------------->
+    <script src="JS/DovednostiJs.js"></script>
+    <script src="JS/NavbarScript.js"></script>
+    <script src="JS/LazyLoadScript.js"></script>
+    <!----------------------------------------------->
 
 </body>
 

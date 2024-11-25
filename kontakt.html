@@ -5,98 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-------------------- CSS links --------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/KontaktyStyle.css">
     <link rel="stylesheet" href="CSS/NavbarStyle.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <!---------------------------------------------------->
 
     <title>Kontakty</title>
 </head>
 
 <body>
-
-    <body>
-        <header>
-            <nav id="navbar">
-                <button id="navbarSmMenuBtn" aria-label="Otevření menu" aria-controls="navbarSmMenu">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </button>
-                <ul id="navbarMenu">
-                    <li>
-                        <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="navbar-link"
-                            aria-label="Domů">Domů</a>
+    <header>
+        <nav id="navbar">
+            <button id="navbarSmMenuBtn" aria-label="Otevření menu" aria-controls="navbarSmMenu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="navbarMenu">
+                <li>
+                    <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="navbar-link"
+                        aria-label="Domů">Domů</a>
+                </li>
+                <li>
+                    <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="navbar-link" aria-label="O mně">O mně</a>
+                </li>
+                <li>
+                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn" class="navbar-link"
+                        aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                </li>
+                <li>
+                    <a href="projekty.html" alt="Jan Zemánek Projekty" id="projektyBtn" class="navbar-link"
+                        aria-label="Projekty">Projekty</a>
+                </li>
+                <li>
+                    <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn" class="navbar-link active"
+                        aria-label="Kontakty">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navbarSmMenu" id="navbarSmMenu" aria-hidden="true">
+            <div id="navbarSmMenuContent">
+                <div id="navbarSmMenuHeader">
+                    <button class="navbarSmMenuCloseBtn" aria-label="Zavřít menu" aria-expanded="false"
+                        aria-controls="navbarSmMenu"><i class="fa fa-close" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sm-menu-list">
+                    <li class="sm-menu-item">
+                        <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="sm-menu-link"
+                            aria-label="Domů" aria-current="page">Domů</a>
                     </li>
-                    <li>
-                        <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="navbar-link" aria-label="O mně">O
-                            mně</a>
+                    <li class="sm-menu-item">
+                        <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="sm-menu-link" aria-label="O mně"
+                            aria-current="page">O mně</a>
                     </li>
-                    <li>
-                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn" class="navbar-link"
+                    <li class="sm-menu-item">
+                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="sm-menu-link"
                             aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
                     </li>
-                    <li>
-                        <a href="projekty.html" alt="Jan Zemánek Projekty" id="projektyBtn" class="navbar-link"
+                    <li class="sm-menu-item">
+                        <a href="projekty.html" alt="Jan Zemánek Projekty" class="sm-menu-link"
                             aria-label="Projekty">Projekty</a>
                     </li>
-                    <li>
-                        <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn" class="navbar-link active"
-                            aria-label="Kontakty">Kontakty</a>
+                    <li class="sm-menu-item active">
+                        <a href="kontakt.html" alt="Jan Zemánek kontakt" class="sm-menu-link"
+                            aria-label="Kontakty">Kontakt</a>
                     </li>
                 </ul>
-                <!--  <ul id="ulResponsive">
-                        <li class="dropdown">
-                            <button class="dropbtn"><img src="CSS/IMAGES/ellipsis-vertical-solid.png" alt="menu" height="26px"
-                                    id="menuButton"></button>
-                            <div class="dropdown-content">
-                                <a href="index.html" alt="Jan Zemánek homepage" id="omneBtn">O mně</a>
-                                <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn">Znalosti a
-                                    dovednosti</a>
-                                <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn">Kontakty</a>
-                            </div>
-                        </li>
-                    </ul> -->
-            </nav>
-            <div class="navbarSmMenu" id="navbarSmMenu" aria-hidden="true">
-                <div id="navbarSmMenuContent">
-                    <div id="navbarSmMenuHeader">
-                        <button class="navbarSmMenuCloseBtn" aria-label="Zavřít menu" aria-expanded="false"
-                            aria-controls="navbarSmMenu"><i class="fa fa-close" aria-hidden="true"></i></button>
-                    </div>
-                    <ul class="sm-menu-list">
-                        <li class="sm-menu-item active">
-                            <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="sm-menu-link"
-                                aria-label="Domů" aria-current="page">Domů</a>
-                        </li>
-                        <li class="sm-menu-item">
-                            <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="sm-menu-link" aria-label="O mně"
-                                aria-current="page">O mně</a>
-                        </li>
-                        <li class="sm-menu-item">
-                            <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="sm-menu-link"
-                                aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
-                        </li>
-                        <li class="sm-menu-item">
-                            <a href="projekty.html" alt="Jan Zemánek Projekty" class="sm-menu-link"
-                                aria-label="Projekty">Projekty</a>
-                        </li>
-                        <li class="sm-menu-item">
-                            <a href="kontakt.html" alt="Jan Zemánek homepage" class="sm-menu-link"
-                                aria-label="Kontakty">Kontakty</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </header>
-        <main>
-            <div class="container">
-                <h1 class="page-title" aria-label="Kontakt">Kontakt</h1>
-                <p>Máte zájem o spolupráci? Neváhejte mě kontaktovat prostřednictvím níže uvedených kanálů,
-                    nebo využijte kontaktní formulář.
-                </p>
-                <div class="columns">
-                    <div class="form-container">
-                        <form id="contactForm">
+        </div>
+    </header>
+    <main>
+        <div class="container">
+
+            <div class="columns">
+                <div class="text-container">
+                    <!-- <form id="contactForm">
                             <label for="jmeno">Jméno:</label>
                             <input type="text" id="name" name="name" placeholder="Jan Novák" required>
                             <label for="email">Email:</label>
@@ -105,60 +90,44 @@
                             <textarea id="message" name="message" placeholder="Napište svou zprávu..." rows="10"
                                 required></textarea>
                             <button type="submit" class="button" aria-label="Odeslat">Odeslat</button>
-                            </form=>
-                    </div>
-                    <div class="contacts-container">
-                        <ul class="contacts-list">
-                            <li><i class="fa-solid fa-square-phone icon"></i><a href="tel:+420774481037"> 774
-                                    481
-                                    037</a></li>
-                            <li><i class="fa fa-envelope icon" aria-hidden="true"></i><a
-                                    href="mailto:jan.zemos@gmail.com">jan.zemos@gmail.com</a></li>
-                            <li><i class="fa-brands fa-facebook icon"></i><a
-                                    href="https://www.facebook.com/grant.imoseuv/" target="_blank">Facebook</a></li>
-                            <li><i class="fa-brands fa-linkedin icon"></i><a
-                                    href="https://www.linkedin.com/in/jan-zemánek" target="_blank">LinkedIn</a></li>
-                            <li><i class="fa-brands fa-square-github icon"></i><a href="https://github.com/JZemanek"
-                                    target="_blank">GitHub</a></li>
-                        </ul>
-                    </div>
+                            </form=> -->
+                    <h1 class="page-title" aria-label="Kontakt">Kontakt</h1>
+                    <p>Máte zájem o spolupráci? Neváhejte mě kontaktovat prostřednictvím emailu, facebooku nebo
+                        LinkedIn.</p>
+                        <hr aria-hidden="true" class="hr-lg">
+                    <p>
+                        Pro základní informace o mně a mojí práci můžete navštívit můj profil na LinkedIn nebo GitHub.
+                    </p>
+                </div> 
+                <hr aria-hidden="true" class="hr-sm">
+                <div class="contacts-container">
+                    <ul class="contacts-list">
+                        <li><i class="fa-solid fa-square-phone icon"></i><a href="tel:+420774481037"> 774
+                                481
+                                037</a></li>
+                        <li><i class="fa fa-envelope icon" aria-hidden="true"></i><a
+                                href="mailto:jan.zemos@gmail.com">jan.zemos@gmail.com</a></li>
+                        <li><i class="fa-brands fa-facebook icon"></i><a href="https://www.facebook.com/grant.imoseuv/"
+                                target="_blank">Facebook</a></li>
+                        <li><i class="fa-brands fa-linkedin icon"></i><a href="https://www.linkedin.com/in/jan-zemánek"
+                                target="_blank">LinkedIn</a></li>
+                        <li><i class="fa-brands fa-square-github icon"></i><a href="https://github.com/JZemanek"
+                                target="_blank">GitHub</a></li>
+                    </ul>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <hr>
-            <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
-        </footer>
+    <footer>
+        <hr>
+        <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
+    </footer>
 
-        <script>
-            document.getElementById("contactForm").addEventListener("submit", async function (event) {
-                event.preventDefault(); // Zabrání standardnímu odeslání formuláře
-
-                const formData = {
-                    name: document.getElementById("name").value,
-                    email: document.getElementById("email").value,
-                    message: document.getElementById("message").value,
-                };
-
-                try {
-                    await fetch("https://script.google.com/macros/s/AKfycbwHy997H7v6YimvEqyuDRQHEfG0GfFy0lDT-Qx-pp4fXltkbv9h2sBPcv1yRJqtcTV7/exec", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        mode: "no-cors", // Umožní obejít CORS omezení
-                        body: JSON.stringify(formData)
-                    });
-
-                    // Potvrzení pro uživatele
-                    alert("Formulář byl úspěšně odeslán!");
-                } catch (error) {
-                    console.error("Chyba při odesílání formuláře:", error);
-                    alert("Něco se pokazilo. Zkuste to znovu.");
-                }
-            });
-        </script>
-    </body>
+    <!------------------- JavaScript --------------------->
+    <script src="JS/NavbarScript.js"></script>
+    <script src="JS/LazyLoadScript.js"></script>
+    <!---------------------------------------------------->
+</body>
 
 </html>
