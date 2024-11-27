@@ -15,45 +15,36 @@ document.querySelectorAll(".skill-card-btn").forEach(btn => {
                     transportOperator = "+";
                 } 
                 const offsetX = rect.left;
-    
-                card.style.transition = "transform 0.5s ease, width 0.5s ease, height 0.5s ease, border 0.5s ease";
+                card.classList.add("card-expanding");
                 card.style.transform = `translateY(${transportOperator}${offsetY}px)`;
+                card.querySelector(".skill-card-footer").querySelector(".skill-card-btn").disabled = true;
     
                 card.addEventListener("transitionend", (event) => {
                     if (event.propertyName === "transform") {
-                        // Po dokončení transformace změň šířku a přidej další transformaci
-                        card.style.width = "calc(100vw - 2px)";
+                        card.classList.add("expand-x");
                         card.style.transform = `translateY(${transportOperator}${offsetY}px) translateX(-${offsetX}px)`;
-                        console.log("Card width changed to 100vw");
-                        // Další posloupnosti na výšku a pevné pozicování
+                        
                         card.addEventListener("transitionend", (event) => {
-                            console.log("Starting transition for height");
-                            if (event.propertyName === "width") {
-                                console.log("Starting transition for position");
-                                card.style.position = "absolute";
-                                card.style.top = "0";
-                                card.style.left = "0";
-                                card.style.height = `calc(100vh - 2px)`;
+                            if (event.propertyName === "transform") {
+                                card.classList.add("expand-y");
                             }
-                            console.log("Card height changed to 100vh");
+
                             card.addEventListener("transitionend", (event) => {
-                                console.log("Starting transition for border radius");
-                                if (event.propertyName === "height") {
-                                    card.style.position = "fixed";
-                                    card.style.top = "0";
-                                    card.style.left = "0";
-                                    card.style.transition="none";
-                                    card.style.transform = "none";
-                                    card.style.width = "calc(100vw - 2px)";
-                                    card.style.height = "calc(100vh - 2px)";
-                                    card.style.borderRadius = "0";
+                                if (event.propertyName === "width") {
+                                    card.style.transform = "";
+                                    card.classList.remove("expand-x");
+                                    card.classList.remove("expand-y");
+                                    card.classList.add("card-active");
+                                    setTimeout(() => {
+                                        card.querySelector(".skill-card-footer").classList.add("skill-card-footer-hidden");
+                                        card.querySelector(".skill-card-content").classList.add("skill-card-content-show");
+                                    }, 400);
                                 }
-                                console.log("Border radius set to 0");
                             }, { once: true });
                         }, { once: true });
                     }
                 }, { once: true });
-                card.classList.add("card-active");
+                
                 document.querySelector("html").style.overflow = "hidden";
             }
         });

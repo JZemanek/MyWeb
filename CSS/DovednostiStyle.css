@@ -57,20 +57,6 @@ hr {
     align-items: center;
 }
 
-.skill-item .skill-card {
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    top: 0;
-    left: 0;
-    border: 1px solid #C62828;
-    border-radius: 10px;
-    background-color: #1E1E1E;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
-}
-
 .skill-item .skill-card .skill-card-header {
     display: flex;
     flex-direction: column;
@@ -80,8 +66,10 @@ hr {
     padding-top: 1em;
     padding-bottom: 0;
 
-        .skill-card-close-btn{
-            display: none;
+    .skill-card-close-btn {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        display: none;
     }
 
     .skill-card-icon {
@@ -135,62 +123,136 @@ hr {
     }
 }
 
+.skill-item .skill-card {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    border: 1px solid #C62828;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, border 0.5s ease;
+}
 
 .skill-item .skill-card[class*="card-active"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 2px);
+    height: calc(100vh - 2px);
+    border-radius: 0;
+    transform: none;
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease;
     z-index: 1;
 
-        .skill-card-close-btn{
-            display: block;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 2em;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
+    .skill-card-close-btn {
+        animation: show-card-close-btn 1s ease-in-out;
+        display: block;
+        position: absolute;
+        opacity: 1;
+        top: 10px;
+        right: 10px;
+        font-size: 2em;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: #C62828;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            transform: scale(0.8);
+        }
     }
 
     hr {
         display: block;
-        width: 100%;
+        width: 90%;
         border: 1px solid #C62828;
         margin-bottom: 1em;
     }
 
-   /* .skill-card-content {
-        display: block;
-        overflow-y: auto;
-        animation: card-content-fade-in 2s ease-in-out;
-    }*/
+    .skill-card-content.skill-card-content-show {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        animation: card-content-fade-in 3s ease-in-out;
+    }
 
-    .skill-card-footer {
-        display: none;
+    .skill-description {
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 1em;
+        position: relative;
+    }
+
+
+    .skill-card-footer.skill-card-footer-hidden {
+        transform: translateY(100%);
+        transition: transform 0.5s ease, visibility 1s ease;
+        visibility: hidden;
     }
 
     .skills-list-container {
+        flex: 1;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 100%;
-
-        .skills-list-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        height: auto;
     }
+
+    .language-skills-list {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        list-style: none; /* Odstraní výchozí styl seznamu */
+    }
+
 }
+
+.skill-item .skill-card[class*="card-expanding"] {
+    z-index: 1;
+}
+
+.skill-item .skill-card[class*="expand-x"] {
+    width: calc(100vw - 2px);
+    transition: width 0.5s ease, transform 0.5s ease;
+}
+
+.skill-item .skill-card[class*="expand-y"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 2px);
+    transition: height 0.5s ease, border 0.5s ease;
+}
+
 
 
 @keyframes card-content-fade-in {
     from {
         height: 0;
-        overflow-y: hidden;
     }
+
     to {
         height: 100%;
         overflow-y: auto;
     }
 }
 
-@keyframes expanded-card {
+@keyframes show-card-close-btn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
