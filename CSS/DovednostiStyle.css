@@ -4,36 +4,43 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 50px);
+    position: relative;
 }
 
-hr {
-    display: none;
-}
-
-.categories-nav {
+.hero-text {
+    position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
+    height: max-content;
+    padding: 20px;
+    text-align: center;
+    color: #F5F5F5;
+    bottom: 20%;
+    left: 0;
 }
 
-.categories-nav .categories-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+#typewriter-container {
+    height: 1.7rem;
+    font-size: 1.5rem;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden; /* Skryje text, který se "ještě nepíše" */
+    border-right: 2px solid #F5F5F5; /* Simuluje kurzor */
+    display: inline-block;
+    margin-top: 1em;
+    animation: blink-caret .75s step-end infinite;
+  }
+
+
+.skill-item .skill-card hr {
+    width: 90%;
+    border: 1px solid #C62828;
+    margin-bottom: 1em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .skills-list {
@@ -52,7 +59,8 @@ hr {
     width: 100%;
     max-width: 300px;
     height: 300px;
-    margin: 10px;
+    margin: 1em;
+    margin-bottom: 4em !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +68,16 @@ hr {
 
 .skill-item .skill-card .skill-card-header {
     display: flex;
+    position: relative;
+    width: 100%;
+    height: 208px !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0.5em;
     padding-top: 1em;
     padding-bottom: 0;
+    overflow: hidden;
 
     .skill-card-close-btn {
         opacity: 0;
@@ -74,12 +86,13 @@ hr {
     }
 
     .skill-card-icon {
+        position: relative;
+        width: 100%;
         font-size: 6em;
     }
 
     .skill-card-title {
         font-size: 1.5em;
-        font-weight: bold;
         text-align: center;
         padding-bottom: 0;
         margin-bottom: 0;
@@ -102,7 +115,6 @@ hr {
 
 .skill-card-footer {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -114,13 +126,12 @@ hr {
         background-color: #C62828;
         color: #1E1E1E;
         border: none;
-        border-radius: 0;
         padding: 0.5em 1em;
         font-size: 1.4em;
         width: 100%;
         font-weight: bold;
         cursor: pointer;
-        transition: all 0.3s ease-in-out;
+        transition: background-color 0.3s ease;
     }
 }
 
@@ -134,16 +145,14 @@ hr {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     overflow: hidden;
     transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, border 0.5s ease;
-    transform-origin: top left;
 }
 
 .skill-item .skill-card[class*="card-collapsing"] {
-    z-index: 10;
+    z-index: 2;
 }
 
 .skill-item .skill-card[class*="card-active"] {
     width: calc(100vw - 2px);
-    max-width: 800px;
     height: calc(100vh - 2px);
     border-radius: 0;
     transform: none;
@@ -151,12 +160,12 @@ hr {
     z-index: 1;
 
     .skill-card-close-btn {
-        animation: show-with-opacity 1s ease-in-out;
+        animation: show-with-opacity 1s ease;
         display: block;
         position: absolute;
         opacity: 1;
         top: 10px;
-        right: 10px;
+        right: 20px;
         font-size: 2em;
         cursor: pointer;
         border: none;
@@ -176,11 +185,8 @@ hr {
     }
 
     hr {
-        display: block;
-        width: 90%;
-        border: 1px solid #C62828;
-        margin-bottom: 1em;
-        animation: show-with-opacity 0.5s ease-in-out;
+        opacity: 1;
+        transition: opacity 0.5s ease;
     }
 
     .skill-card-content {
@@ -245,7 +251,7 @@ hr {
 }
 
 .skill-item .skill-card[class*="card-expanding"] {
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, border 0.5s ease;
     z-index: 1;
 }
 
@@ -258,6 +264,7 @@ hr {
 
 .skill-item .skill-card[class*="expand-y"] {
     height: calc(100vh - 2px);
+    transition: transform 0.5s ease;
 
     .skill-card-footer {
         transform: translateY(100%);
@@ -290,5 +297,28 @@ hr {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent; /* Kurzor zmizí */
+    }
+    50% {
+      border-color: #F5F5F5; /* Kurzor se objeví */
+    }
+  }
+
+
+@media (max-width: 800.98px) {
+    .skill-item .skill-card[class*="card-active"]{
+        width: calc(100vw - 2px);
+    }
+}
+
+@media (min-width: 801px)  {
+    .skill-item .skill-card[class*="card-active"]{
+        width: 800px;
     }
 }

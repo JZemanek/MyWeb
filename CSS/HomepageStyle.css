@@ -1,7 +1,7 @@
 
 .button {
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(135deg, #722F37 0%, #8B1F2C 100%);
+    background: linear-gradient(135deg, #8B1F2C 0%, #C62828 100%);
     border: none;
     border-radius: 50px;
     color: #ffffff;
@@ -283,7 +283,7 @@
 
         i {
             font-size: 3em;
-            color: red;
+            color: #C62828;
             padding-top: 0.4em;
         }
     }
