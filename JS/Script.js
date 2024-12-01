@@ -41,3 +41,23 @@ document.querySelectorAll(".arrow-toggle").forEach(arrow => {
         }, 500);
     })
 });
+
+function typewriter(element, text, speed) {
+    let index = 0;
+    let interval = setInterval(() => {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+        } else {
+            clearInterval(interval);
+        }
+    }, speed);
+}
+window.onload = () => {
+    setTimeout(() => {
+    typewriter(document.querySelector(".typewriter-text-h"), "<h1>Jan Zemánek</h1>", 100);
+    setTimeout(() => {
+        typewriter(document.querySelector(".typewriter-text-p"), "<p>Welcome!</p>", 100);
+    }, 2500);
+    }, 1000);
+}

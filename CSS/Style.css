@@ -1,3 +1,31 @@
+:root {
+    /* Light theme colors */
+    --background-color-primary: linear-gradient(to top, #F5F5F5, #E0E0E0);
+    /* Footer and navbar background */
+    --background-color-secondary: #1E1E1E;
+    --text-color: #000000;
+    --text-color-secondary: #F5F5F5;
+    --primary-color: #C62828;
+    --secondary-color: #8B1F2C;
+    --accent-color: #F5F5F5;
+    --card-bg-color: #E0E0E0;
+
+    [data-theme="dark"] {
+        /* Dark theme colors */
+        --background-color: linear-gradient(to top, #333333, #121212);
+        --background-color-secondary: #0E0E0E;
+        --text-color: #F5F5F5;
+        --text-color-secondary: #333333;
+        --primary-color: #C62828;
+        --secondary-color: #8B1F2C;
+        --accent-color: #333333;
+        --card-bg-color: #1E1E1E;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--background-color-secondary);
+}
+
 body {
     position: relative;
     min-height: 100vh;
@@ -6,8 +34,8 @@ body {
     margin: 0;
     max-width: 100vw;
     /* Dark linear gradient background*/
-    background: linear-gradient(to top, #333333, #121212);
-    color: #F5F5F5;
+    background: var(--background-color);
+    color: var(--text-color);
 }
 
 html {
@@ -16,14 +44,13 @@ html {
 }
 
 main {
-    padding: 2em;
     margin: auto;
     margin-bottom: 50px;
 }
 
 footer {
-    background-color: #0D0D0D;
-    color: white;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
     text-align: center;
     margin: 0 !important;
     width: 100%;
@@ -36,14 +63,35 @@ footer {
     }
 }
 
-/* Lazy loading styles for cards */
-.lazy-loading {
+.lazy-loading.lazy-loading-faster {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
+/* Lazy loading styles for cards */
+.lazy-loading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.1s ease-in-out, transform 1.1s ease-in-out;
+}
+
 .lazy-loading.loaded {
     opacity: 1;
     transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent !important;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-color-secondary);
 }

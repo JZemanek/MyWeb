@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, viewport-fit-cover, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jan Zemánek">
+    <meta name="keywords"
+        content="Jan Zemánek, Web, Programování, HTML, CSS, JavaScript, Java, Vue, Spring Boot, Developer, Front-end, Back-end, Full-stack, Full-stack developer, Front-end developer, Back-end developer">
+    <meta name="description"
+        content="Osobní web - Jan Zemánek. Fullstack developer webových aplikací. Programování Spring Boot, Thyeleaf, Vue.js, JavaScript, HTML, CSS">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+
+    <!-------------------- CSS links --------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/NavbarStyle.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/About.css">
+    <!---------------------------------------------------->
+    <title>MujWeb</title>
+</head>
+
+<body data-theme="dark">
+    <header>
+        <nav id="navbar">
+            <button id="navbarSmMenuBtn" aria-label="Otevření menu" aria-controls="navbarSmMenu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="navbarMenu">
+                <li>
+                    <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="navbar-link" 
+                        aria-label="Domů">Domů</a>
+                </li>
+                <li>
+                    <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="navbar-link active" aria-label="O mně">O
+                        mně</a>
+                </li>
+                <li>
+                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn" class="navbar-link"
+                        aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                </li>
+                <li>
+                    <a href="projects.html" alt="Jan Zemánek Projekty" id="projektyBtn" class="navbar-link"
+                        aria-label="Projekty">Projekty</a>
+                </li>
+                <li>
+                    <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn" class="navbar-link"
+                        aria-label="Kontakty">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navbarSmMenu" id="navbarSmMenu" aria-hidden="true">
+            <div id="navbarSmMenuContent">
+                <div id="navbarSmMenuHeader">
+                    <button class="navbarSmMenuCloseBtn" aria-label="Zavřít menu" aria-expanded="false"
+                        aria-controls="navbarSmMenu"><i class="fa fa-close" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sm-menu-list">
+                    <li class="sm-menu-item">
+                        <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="sm-menu-link"
+                            aria-label="Domů">Domů</a>
+                    </li>
+                    <li class="sm-menu-item active">
+                        <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="sm-menu-link" aria-label="O mně"
+                            aria-current="page">O mně</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="sm-menu-link"
+                            aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="projects.html" alt="Jan Zemánek Projekty" class="sm-menu-link"
+                            aria-label="Projekty">Projekty</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="kontakt.html" alt="Jan Zemánek kontakt" class="sm-menu-link"
+                            aria-label="Kontakty">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1 class="about-me-title lazy-loading lazy-loading-faster">O mně</h1>
+                <div class="about-me-text lazy-loading">
+                    <p>
+                        Život mi ukázal, že skutečná síla přichází z překonávání překážek. Cesta k programování pro mě
+                        začala v nelehké fázi života, kdy jsem čelil osobním i zdravotním výzvám. Právě ty mě naučily
+                        trpělivosti, vytrvalosti a odvaze hledat nové cesty.
+                    </p>
+
+                    <p>Programování pro mě není jen práce, ale i vášeň, která mě naplňuje. Miluji proces objevování,
+                        hledání elegantních řešení a neustálého učení. Ve volném čase se věnuji trekkingu – koníčku,
+                        který mě občas inspiruje k tomu, jak přistupovat k výzvám a nacházet nové perspektivy.</p>
+
+                    <p>Každý projekt vnímám jako příležitost tvořit něco smysluplného a posouvat hranice možného. Jak
+                        říká starý latinský citát: „I když chybí síly, je třeba chválit vůli.“ Tento přístup se stal mým
+                        osobním mottem a odráží se v mém každodenním přístupu k práci.</p>
+
+                    <p>Více o mých dovednostech a projektech si můžete přečíst v sekci <a href="dovednosti.html" alt="Jan Zemánek Dovednosti">Dovednosti</a> a <a href="projekty.html" alt="Jan Zemánek Projekty">Projekty</a>. Pokud
+                        hledáte někoho, kdo přistupuje k výzvám s odhodláním, vášní a důrazem na kvalitu, budu rád, když
+                        mě <a href="kontakt.html" alt="Jan Zemánek kontakt">kontaktujete</a>.</p>
+                    </p>
+                </div>
+
+                <h2 class="strong-and-weak-points-title lazy-loading">Silné a slabé stránky</h2>
+                <div class="strong-and-weak-points">
+                    <ul class="strong-points lazy-loading">
+                        <li>Vytvrvalost a odhodlání: Dokončuji projekty i přes výzvy, hledám řešení tam, kde jiní vidí problémy.</li>
+                        <li>Detailní přístup: Soustředím se na kvalitu a preciznost při práci.</li>
+                        <li>Rychlé učení: Snadno se přizpůsobím novým technologiím.</li>
+                        <li>Kreativita: Hledám inovativní řešení a přistupuji k problémům z nových úhlů.</li>
+                        <li>Schopnost překonávat výzvy: Osobní zkušenosti mě naučily zvládat stres a hledat efektivní řešení.</li>
+                    </ul>
+                    <ul class="weak-points lazy-loading">
+                        <li>Perfekcionismus: Někdy věnuji více času detailům, než je nutné. </li>
+                        <li>Sebekritika: Často příliš přemýšlím, co jsem mohl udělat lépe.</li>
+                        <li>Delegace úkolů: Občas se snažím zvládnout příliš mnoho sám.</li>
+                        <li>Mám sklony pracovat na úkor odpočinku. To se může projevit na kvalitě.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <!------------------- JavaScript --------------------->
+    <script src="JS/ParallaxScript.js"></script>
+    <script src="JS/LazyLoadScript.js"></script>
+    <script src="JS/NavbarScript.js"></script>
+    <!---------------------------------------------------->
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jan Zemánek">
+    <meta name="keywords" content="Jan Zemánek, Web Development, Programming, HTML, CSS, JavaScript, Java, Vue.js, React.js, Angular, Node.js, Developer, Front-end, Back-end, Full-stack, Full-stack developer, Front-end developer, Back-end developer">
+    <meta name="description" content="Personal website - Jan Zemánek. Fullstack developer web applications. Programming Spring Boot, Thyeleaf, Vue.js, JavaScript, HTML, CSS">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <!-------------------- CSS links --------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/NavbarStyle.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/ProjectsStyle.css">
+    <!---------------------------------------------------->
+    <title>Projects</title>
+</head>
+<body data-theme="dark">
+    <header>
+        <nav id="navbar">
+            <button id="navbarSmMenuBtn" aria-label="Otevření menu" aria-controls="navbarSmMenu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="navbarMenu">
+                <li>
+                    <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="navbar-link"
+                        aria-label="Domů">Domů</a>
+                </li>
+                <li>
+                    <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="navbar-link" aria-label="O mně">O mně</a>
+                </li>
+                <li>
+                    <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" id="dovednostiBtn" class="navbar-link"
+                        aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                </li>
+                <li>
+                    <a href="projects.html" alt="Jan Zemánek Projekty" id="projektyBtn" class="navbar-link active"
+                        aria-label="Projekty">Projekty</a>
+                </li>
+                <li>
+                    <a href="kontakt.html" alt="Jan Zemánek homepage" id="kontaktyBtn" class="navbar-link"
+                        aria-label="Kontakty">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navbarSmMenu" id="navbarSmMenu" aria-hidden="true">
+            <div id="navbarSmMenuContent">
+                <div id="navbarSmMenuHeader">
+                    <button class="navbarSmMenuCloseBtn" aria-label="Zavřít menu" aria-expanded="false"
+                        aria-controls="navbarSmMenu"><i class="fa fa-close" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sm-menu-list">
+                    <li class="sm-menu-item">
+                        <a href="index.html" alt="Jan Zemánek homepage" id="homeBtn" class="sm-menu-link"
+                            aria-label="Domů">Domů</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="about.html" alt="Jan Zemánek" id="omneBtn" class="sm-menu-link" aria-label="O mně">O mně</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="dovednosti.html" alt="Jan Zemánek Dovednosti" class="sm-menu-link"
+                            aria-label="Znalosti a dovednosti">Znalosti a dovednosti</a>
+                    </li>
+                    <li class="sm-menu-item">
+                        <a href="projects.html" alt="Jan Zemánek Projekty" class="sm-menu-link"
+                            aria-label="Projekty" aria-current="page">Projekty</a>
+                    </li>
+                    <li class="sm-menu-item active">
+                        <a href="kontakt.html" alt="Jan Zemánek kontakt" class="sm-menu-link"
+                            aria-label="Kontakty">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <hr>
+        <p> &#169; Jan Zemánek. Všechna práva vyhrazena.</p>
+    </footer>
+    
+    <!------------------- JavaScript --------------------->
+    <script src="JS/NavbarScript.js"></script>
+    <script src="JS/LazyLoadScript.js"></script>
+    <!---------------------------------------------------->
+</body>
+</html>
